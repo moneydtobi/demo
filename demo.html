@@ -1,0 +1,40 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <style>  
+        body {  
+            display: flex;  
+            justify-content: center;  
+            align-items: center;  
+        }  
+          
+        .shape {  
+            width: 80px;  
+            height: 80px;  
+            background-color: #34e000;  
+            border-radius: 50%;  
+            animation: bouncingBallAnimation 4s;  
+            animation-direction: alternate;  
+            animation-timing-function: cubic-bezier(.4, 0.06, 1, .6);  
+            animation-iteration-count: infinite;  
+        }  
+          
+        /* we will make diagonal bounce to the ball */  
+        @keyframes bouncingBallAnimation {  
+            from {  
+                transform: translate3d(0, 0, 0);  
+            }  
+            to {  
+                transform: translate3d(210px, 510px, 0);  
+            }  
+        }  
+          
+    </style>  
+</head>  
+  
+<body>  
+    <!-- this div will be desinged as a ball which will have bounce effect -->  
+    <div class="shape"></div>  
+</body>  
+  
+</html>
